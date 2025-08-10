@@ -15,6 +15,7 @@ def entrada_estoque(codigo, quantidade, motivo="", responsavel=""):
         idx = df.index[df['codigo'].astype(str) == codigo].tolist()
 
         if not idx:
+            print('Produto não encontrado')
             return False, "Produto não encontrado"
 
         idx = idx[0]
